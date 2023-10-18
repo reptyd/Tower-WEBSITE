@@ -119,7 +119,7 @@ button {
   transition: 0.2s ease;
 }
 button:hover {
-  background-color: #138f87;
+  background-color: #0d3a37;
 }
 
 a {
@@ -131,11 +131,11 @@ a:hover {
 }
 
 body {
-  background: #102430;
+  background: #1f4e5c;
 }
 
 .container {
-  background: #102430;
+  background: #1f4e5c;
   position: relative;
   z-index: 15;
 }
