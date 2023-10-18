@@ -112,6 +112,10 @@ nav-item {
   letter-spacing: "";
 }
 
+ellipse {
+  fill: #28b8af;
+}
+
 button {
   background-color: #28b8af;
   color: #ffffff;

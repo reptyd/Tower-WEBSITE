@@ -69,6 +69,9 @@ a,
 nav-item {
     @include fontStyle($color-white, $font-text, 16px);
 }
+ellipse {
+    fill: #28b8af;
+}
 
 button {
     background-color: $color-blue;
