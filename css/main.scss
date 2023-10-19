@@ -10,8 +10,9 @@
 
 /*Шрифты*/
 $font-logo: "furore";
-$font-title: "Baron Neue";
-$font-subtitle: "Gilroy-Regular";
+$font-title-block: "Baron Neue";
+$font-title-page: "Gilroy-Regular";
+$font-subtitle-page: "Gilroy-Regular";
 $font-text: "Gilroy-Regular";
 
 /*Палитра цветов*/
@@ -42,32 +43,32 @@ $color-sub-bg: #152a36;
 }
 
 * {
-    @include fontStyle($color-light-blue, $font-text, 17px);
+    @include fontStyle($color-light-blue, $font-text, calc(4px + 16 * (100vw / 1920)), normal, 400, 1.4, 0.1em);
 }
 
 %logoFont {
-    @include fontStyle($color-white, $font-logo, 20px, $line-height: 1.12);
+    @include fontStyle($color-white, $font-logo, calc(8px + 16 * (100vw / 1920)), $line-height: 1.12);
 }
 
 %textFont {
-    @include fontStyle($color-light-blue, $font-text, 17px, normal, 400, 28px, 1.36px);
+    @include fontStyle($color-light-blue, $font-text, calc(6px + 16 * (100vw / 1920)), normal, 400, 1.82, 0.1em);
 }
 
-%titleBlueFont {
-    @include fontStyle($color-blue, $font-subtitle, calc(19px + 16 * (100vw / 1920)), normal, 500, normal, 1.4px);
+%fontTitlePage {
+    @include fontStyle($color-blue, $font-title-page, calc(21px + 16 * (100vw / 1920)), normal, 600, normal, 0.11em);
 }
 
-%titleWhiteFont {
-    @include fontStyle($color-white, $font-title, calc(19px + 6 * (100vw / 1920)), normal, 400, normal, 1px);
+%fontTitleBlock {
+    @include fontStyle($color-white, $font-title-block, calc(19px + 6 * (100vw / 1920)), normal, 400, normal, 0.1em);
 }
 
-%subtitleWhiteFont {
-    @include fontStyle($color-white, $font-subtitle, calc(19px + 3 * (100vw / 1920)), normal, 500, normal, 0.88px);
+%fontSubtitleBlock {
+    @include fontStyle($color-white, $font-subtitle-page, calc(8px + 16 * (100vw / 1920)), normal, 600, normal, 0.1em);
 }
 
 a,
 nav-item {
-    @include fontStyle($color-white, $font-text, 16px);
+    @include fontStyle($color-white, $font-text, calc(9px + 6 * (100vw / 1920)));
 }
 
 button {
@@ -83,6 +84,20 @@ button {
     }
 }
 
+.btn-outline {
+    background: transparent;
+    border: 2px solid $color-light-blue;
+
+    transition: 0.2s ease;
+
+    &:hover {
+        border-color: $color-blue;
+        color: $color-blue;
+        background: transparent;
+    }
+}
+
+
 a {
     color: #ffffff !important;
     transition: 0.2s ease;
@@ -91,6 +106,7 @@ a {
         color: $color-blue !important;
     }
 }
+
 
 .container {
     background: $color-container;
@@ -133,16 +149,16 @@ ul {
 
 .title-blue {
     text-align: center;
-    @extend %titleBlueFont;
+    @extend %fontTitlePage;
 }
 
 .title-white {
     text-align: center;
-    @extend %titleWhiteFont;
+    @extend %fontTitleBlock;
 }
 
 .subtitle {
-    @extend %subtitleWhiteFont;
+    @extend %fontSubtitleBlock;
 }
 
 .btn-active {
@@ -245,7 +261,6 @@ body {
                         color: white !important;
                     }
                 }
-  
 
                 li {
                     border-radius: 3px;
@@ -296,6 +311,8 @@ body {
                 margin-bottom: 20px;
             }
 
+            // СТРАНИЦА "АКТИВНОСТИ"
+            // выбор активности
             .container__select-activities {
                 background: $color-sub-bg;
                 border-radius: 10px;
@@ -346,6 +363,7 @@ body {
                 }
             }
 
+            //  характеристика
             .container__activity-info {
                 .container__activity-preview {
                     display: flex;
@@ -375,6 +393,72 @@ body {
                     }
                 }
             }
+            // ----------- КОНЕЦ АКТИВНОСТИ ------------
+
+            // СТРАНИЦА "ГЛАВНАЯ"
+            // приветствие
+            .row {
+            }
+            .welcome-block {
+                padding-top: 10px;
+                justify-content: center;
+                align-items: center;
+
+                // .welcome-block__title
+                &__title {
+                    @extend %fontTitlePage;
+
+                    font-size: calc(40px + 16 * (100vw / 1920));
+                    font-weight: 500;
+                    letter-spacing: 0em;
+                }
+
+                // .welcome-block__subtitle
+                &__subtitle {
+                    @extend %fontTitleBlock;
+
+                    font-size: calc(65px + 16 * (100vw / 1920));
+                    color: $color-blue;
+                    margin-left: -1.98px;
+                    margin-bottom: 40px;
+                }
+                p {
+                    line-height: 1.8em;
+                    margin-bottom: 20px;
+                }
+
+                button {
+                    margin-bottom: 15px;
+                    height: 40px;
+                }
+                // .welcome-block__btn-details
+                &__btn-details {
+                    margin-right: 15px;
+                }
+
+                // .welcome-block__btn-games
+                &__btn-games {
+                }
+
+                // .welcome-block__btn-discord
+                &__btn-discord {
+                    background: #324E94;
+
+                    transition: 0.2s ease;
+
+                    &:hover {
+                        background: #1e305c;
+                    }
+                }
+            }
+            .col-lg-6 {
+            }
+            .text {
+            }
+            .img-fluid {
+            }
+
+            // ----------- КОНЕЦ ГЛАВНАЯ ------------
 
             .container__slider {
                 margin-bottom: 200px;

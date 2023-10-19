@@ -84,17 +84,17 @@ h1, h2, h3, h4, h5, h6 {
 * {
   color: #ccdedb;
   font-family: "Gilroy-Regular";
-  font-size: 17px;
+  font-size: calc(4px + 0.8333333333vw);
   font-style: normal;
   font-weight: 400;
-  line-height: "";
-  letter-spacing: "";
+  line-height: 1.4;
+  letter-spacing: 0.1em;
 }
 
 .logo .logo__title {
   color: #fff;
   font-family: "furore";
-  font-size: 20px;
+  font-size: calc(8px + 0.8333333333vw);
   font-style: normal;
   font-weight: 400;
   line-height: 1.12;
@@ -104,48 +104,48 @@ h1, h2, h3, h4, h5, h6 {
 .text, button {
   color: #ccdedb;
   font-family: "Gilroy-Regular";
-  font-size: 17px;
+  font-size: calc(6px + 0.8333333333vw);
   font-style: normal;
   font-weight: 400;
-  line-height: 28px;
-  letter-spacing: 1.36px;
+  line-height: 1.82;
+  letter-spacing: 0.1em;
 }
 
-.title-blue {
+body main .container_main .welcome-block__title, .title-blue {
   color: #28b8af;
   font-family: "Gilroy-Regular";
-  font-size: calc(19px + 0.8333333333vw);
+  font-size: calc(21px + 0.8333333333vw);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: normal;
-  letter-spacing: 1.4px;
+  letter-spacing: 0.11em;
 }
 
-.title-white {
+body main .container_main .welcome-block__subtitle, .title-white {
   color: #fff;
   font-family: "Baron Neue";
   font-size: calc(19px + 0.3125vw);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  letter-spacing: 1px;
+  letter-spacing: 0.1em;
 }
 
 .subtitle {
   color: #fff;
   font-family: "Gilroy-Regular";
-  font-size: calc(19px + 0.15625vw);
+  font-size: calc(8px + 0.8333333333vw);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: normal;
-  letter-spacing: 0.88px;
+  letter-spacing: 0.1em;
 }
 
 a,
 nav-item {
   color: #fff;
   font-family: "Gilroy-Regular";
-  font-size: 16px;
+  font-size: calc(9px + 0.3125vw);
   font-style: normal;
   font-weight: 400;
   line-height: "";
@@ -160,6 +160,17 @@ button {
 }
 button:hover {
   background-color: #138f87;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #ccdedb;
+  transition: 0.2s ease;
+}
+.btn-outline:hover {
+  border-color: #28b8af;
+  color: #28b8af;
+  background: transparent;
 }
 
 a {
@@ -398,6 +409,40 @@ body main .container_main .container__activity-info .activity-properties .activi
 }
 body main .container_main .container__activity-info .activity-properties .activity-properties__admin-text {
   margin-bottom: 15px;
+}
+body main .container_main .welcome-block {
+  padding-top: 10px;
+  justify-content: center;
+  align-items: center;
+}
+body main .container_main .welcome-block__title {
+  font-size: calc(40px + 0.8333333333vw);
+  font-weight: 500;
+  letter-spacing: 0em;
+}
+body main .container_main .welcome-block__subtitle {
+  font-size: calc(65px + 0.8333333333vw);
+  color: #28b8af;
+  margin-left: -1.98px;
+  margin-bottom: 40px;
+}
+body main .container_main .welcome-block p {
+  line-height: 1.8em;
+  margin-bottom: 20px;
+}
+body main .container_main .welcome-block button {
+  margin-bottom: 15px;
+  height: 40px;
+}
+body main .container_main .welcome-block__btn-details {
+  margin-right: 15px;
+}
+body main .container_main .welcome-block__btn-discord {
+  background: #324E94;
+  transition: 0.2s ease;
+}
+body main .container_main .welcome-block__btn-discord:hover {
+  background: #1e305c;
 }
 body main .container_main .container__slider {
   margin-bottom: 200px;
